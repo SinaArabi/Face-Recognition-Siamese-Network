@@ -17,7 +17,7 @@ app = FastAPI()
 # Directories for storing model, embeddings, and uploads
 EMBEDDINGS_FILE = "../data/face_embeddings.pkl"
 MODEL_PATH = "../model/best.pth"
-uploads_dir = Path("./uploads")
+uploads_dir = Path("../uploads")
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 model = SiameseNetwork().to(device)
